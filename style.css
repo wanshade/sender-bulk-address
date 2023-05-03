@@ -1,0 +1,148 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+
+input[type="text"],
+textarea {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  width: 800px;
+  }
+
+textarea {
+  resize: none;
+  
+}
+
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005F6B;
+}
+
+#output {
+  height: 300px;
+  display: block;
+  overflow: auto
+}
+
+/* #output {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 800px;
+  height: 100px; 
+  overflow-wrap: break-word;
+  resize: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+#private-keys {
+  height: 300px;
+  display: block;
+  overflow: auto;
+}
+footer {
+  margin-top: auto;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  form {
+    height: auto;
+  }
+  
+  input[type="text"], 
+  textarea {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for screens smaller than 480px */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  input[type="text"], 
+  textarea {
+    width: 100%;
+  }
+}

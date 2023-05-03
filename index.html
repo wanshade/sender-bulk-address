@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send ETH</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+</head>
+</head>
+<body>
+  <h1>Send ETH</h1>
+  <form id="send-form">
+    <p>This app will send from multiple wallet address that you provide the privatekeys to 1 address , and will send all balance on the wallet minus gas fee </p>
+    <div>
+      <h2>Input Private Keys:</h2>
+      <textarea type="text" id="private-keys" name="private-keys" ></textarea>
+    </div>
+    <div>
+      <h2>To Address:</h2>
+      <input type="text" id="to-address" name="to-address">
+    </div>
+    <div>
+      <button type="button" id="send-button">Send</button>
+    </div>
+    <div>
+      <textarea id="output" readonly></textarea>
+    </div>
+  </form>
+  
+  <script type="text/javascript" src="app.js"></script>
+</body>
+<footer>
+  <div class="footer-container">
+    <p>Made with ❤️ by Wandaem</p>
+  </div>
+</footer>
+</html>
