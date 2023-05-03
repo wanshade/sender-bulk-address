@@ -21,6 +21,8 @@ header{
 .logo {
   height: 150px;
   margin-left: 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 
