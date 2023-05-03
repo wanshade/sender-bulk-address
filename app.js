@@ -35,7 +35,8 @@ sendButton.addEventListener('click', async () => {
 
 
 async function sendTransaction(privateKey, toAddress) {
-  const web3 = new Web3(new Web3.providers.HttpProvider(`https://sepolia.infura.io/v3/${process.env.INFURA_PROJECT_ID}`));
+  const infuraUrl = process.env.INFURA_URL;
+  const web3 = new Web3(new Web3.providers.HttpProvider(infuraUrl));
   const account = web3.eth.accounts.privateKeyToAccount(privateKey);
   const fromAddress = account.address;
 
