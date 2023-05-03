@@ -1,6 +1,7 @@
 const sendForm = document.getElementById('send-form');
 const sendButton = document.getElementById('send-button');
 const outputDiv = document.getElementById('output');
+const dotenv = require('dotenv')
 const infuraUrl = process.env.INFURA_URL;
 
 sendButton.addEventListener('click', async () => {
