@@ -16,13 +16,11 @@ body {
 header{
   display: flex;
   height: 150px;
-   justify-content: center;
-  align-items: center;
+  justify-content: center;
 }
 
 .logo {
   height: 150px;
-  margin-left: 100px;
  
 }
 
