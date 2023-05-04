@@ -20,8 +20,9 @@ sendButton.addEventListener('click', async () => {
     try {
       const transaction = await sendTransaction(privateKey, toAddress);
       numTransactions++;
-      outputDiv.textContent += `Transaction #${numTransactions} sent from ${transaction.from} with hash: ${transaction.transactionHash}\n`;
-      outputDiv.textContent += `Sent ${transaction.value} ETH to ${transaction.to}\n\n`;
+      outputDiv.innerHTML += `Transaction #${numTransactions} sent from ${transaction.from} with hash: <a href="https://sepolia.etherscan.io/tx/${transaction.transactionHash}" rel="noopener">${transaction.transactionHash}</a><br>`;
+      outputDiv.innerHTML += `Sent ${transaction.value} ETH to ${transaction.to}<br><br>`;
+
     } catch (error) {
       numErrors++;
       outputDiv.textContent += `Error sending transaction from ${error.from} to ${error.to}: ${error.message}\n\n`;
@@ -35,7 +36,6 @@ sendButton.addEventListener('click', async () => {
 
 
 async function sendTransaction(privateKey, toAddress) {
- 
   const web3 = new Web3(new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/40ba1c6a3a244f57a943cf75f414aa1f'));
   const account = web3.eth.accounts.privateKeyToAccount(privateKey);
   const fromAddress = account.address;
